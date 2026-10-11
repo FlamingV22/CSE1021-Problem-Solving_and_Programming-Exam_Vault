@@ -13,9 +13,9 @@ terms = [2,3]
 N = int(input("Enter number of terms: "))
 
 if N == 1: 
-    print(terms[0])
-else: 
-    print(terms[0], terms[1], end = " ")
+    print("2")
+elif N >=2: 
+    print("2 3", end = " ")
     for i in range(2,N):
         next_term = terms[i-2] + terms [i-1]
         terms.append(next_term)
@@ -26,6 +26,7 @@ else:
 # Algorithm:
 '''
 -> We will initialize a counter named 'total' to 0
+-> Next, if N > 2, we will assign total = 5 to account for the first two terms
 -> Next, we will add another line inside our for loop to increment total by next_term
 -> Next, we will add a final print statement outside the for loop to show our total counter at the end
 '''
@@ -36,17 +37,17 @@ N = int(input("Enter number of terms: "))
 
 total = 0
 if N == 1: 
-    print(f"{terms[0]} \n Total: {total + terms[0]}") 
-else: 
-    print(terms[0], terms[1], end = " ")
+    print(f"2 \nTotal: 2") 
+elif N == 2: 
+    print(f"2 3 \nTotal: 5")
+else:
+    print("2 3", end = " ")
+    total = 5
     for i in range(2,N):
         next_term = terms[i-2] + terms [i-1]
         terms.append(next_term)
-        Total += next_term
+        total += next_term
         print(next_term, end = " ")
-if N == 2:
-    print(f"\nTotal: {total + terms[0] + terms[1]}")
-else:
     print(f"\nTotal: {total}")
 
 # ---------(c)---------
@@ -66,6 +67,6 @@ Output will be:
 '''
 Output will be:
 -> 2 3 5 8 13 21 34
--> Total: 76
+-> Total: 86
 '''
 #-------------------------------------------------------------------------------------------------------------
