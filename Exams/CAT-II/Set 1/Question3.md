@@ -7,6 +7,7 @@
       ("P103",72,,97,36.6),
       ("P104",115,91,38.2),
       ("P105",88,96,37.0)
+]
 
 ## Write a Python program to analyze the patient data using iteration and list operations.
 
